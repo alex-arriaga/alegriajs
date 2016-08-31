@@ -5,6 +5,9 @@ let template = `
     {{#each items}}
     <div class="item">
         {{title}}
+        {{#if statistics.views}}
+            <strong>Views: </strong>{{ statistics.views }}
+        {{/if}}
     </div>
     {{/each}}
 `;
@@ -13,10 +16,19 @@ let widget = new Alegria({
     selector: "container",
     template: template,
     data: {
-        title : "Recent events",
+        title: "Recent events",
         items: [{
             id: 1,
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            statistics: {
+                views: 34,
+                special: true,
+                social: {
+                    facebook: {
+                        likes: 345
+                    }
+                }
+            }
         }, {
             id: 2,
             title: "Nullam dignissim dolor venenatis metus"
