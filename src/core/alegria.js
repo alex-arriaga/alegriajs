@@ -1,17 +1,33 @@
+import {Compiler} from "./compiler";
+
 export class Alegria {
 
-    constructor(params = {}) {
-
+    constructor(settings = {}) {
+        this.settings = Object.assign({}, settings);
+        this.compiler = new Compiler();
     }
 
     render() {
-        return new Promise((resolve, reject)=> {
-            console.log("Hey!");
-            resolve();
-        });
+        console.log("Render here!");
+
+        return this;
     }
 
-    data() {
-        console.log("data");
+    compileTemplate(template) {
+        this.compiler.compile(template);
+
+        return this;
+    }
+
+    get jsonData() {
+        return this.settings.data;
+    }
+
+    set jsonData(jsonData) {
+        this.settings.data = jsonData;
+    }
+
+    action(name, callback) {
+        Alegria.prototype[name] = callback;
     }
 }
