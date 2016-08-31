@@ -1,0 +1,26 @@
+{
+  "name": "alegriajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "systemjs": "^0.19.37",
+    "systemjs-builder": "^0.15.30"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-arriaga/alegriajs.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/alex-arriaga/alegriajs/issues"
+  },
+  "homepage": "https://github.com/alex-arriaga/alegriajs#readme"
+}
