@@ -8,13 +8,11 @@ export class Alegria {
     }
 
     render() {
-        console.log("Render here!");
+        let template = this.compiler.compile(this.settings.template);
+        let html = template(this.settings.data);
 
-        return this;
-    }
-
-    compileTemplate(template) {
-        this.compiler.compile(template);
+        let el = document.getElementById(this.settings.selector);
+        el.innerHTML = html;
 
         return this;
     }

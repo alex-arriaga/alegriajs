@@ -1,6 +1,11 @@
+import Handlebars from "handlebars";
 export class Compiler {
 
-    compile() {
+    constructor() {
 
+    }
+
+    compile(template) {
+        return Handlebars.compile(template);
     }
 }

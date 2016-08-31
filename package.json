@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
   "devDependencies": {
     "es6-shim": "^0.35.1",
     "systemjs": "^0.19.37",

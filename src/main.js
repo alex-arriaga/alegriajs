@@ -1,12 +1,19 @@
 import {Alegria} from "./core/alegria";
 
 let template = `
+    <h1>{{ title }}</h1>
+    {{#each items}}
     <div class="item">
         {{title}}
     </div>
+    {{/each}}
 `;
+
 let widget = new Alegria({
+    selector: "container",
+    template: template,
     data: {
+        title : "Recent events",
         items: [{
             id: 1,
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -28,7 +35,6 @@ widget.action("filterByTitle", function () {
 });
 
 widget
-    .compileTemplate()
     .render()
     .filterByTitle();
 
